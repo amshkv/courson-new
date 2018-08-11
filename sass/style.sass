@@ -221,6 +221,12 @@ body
   &--small
     width: 220px
 
+  &--course
+    width: 220px
+    line-height: 32px
+    height: 32px
+
+
   &:hover, &:focus
     animation-name: shake;
     animation-duration: 0.8s;
@@ -495,20 +501,7 @@ body
 
   &__link
     margin-top: auto
-    @include size(220px, 32px)
-    line-height: 32px
-    text-align: center
-    text-decoration: none
-    color: $main-color
-    border-radius: 16px;
-    background-color: $accent-color;
-    box-shadow: 0 10px 24px -12px $box-shadow-color;
-    cursor: pointer
     z-index: 2
-    font-weight: bold
-    @include trans(opacity)
-    &:hover
-      opacity: .5
   
   &__inner
     position: absolute
