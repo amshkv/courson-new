@@ -635,3 +635,73 @@ body
   background-color: $bg-col
   
   
+.footer
+  margin-top: 56px
+  @include bg(3steps-back, jpg)
+  background-size: cover
+  padding-top: 82px
+
+  &__inner
+    @include wrapper
+
+  &__list
+    margin: 30px -16px 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    list-style: none
+    padding-bottom: 40px
+    position: relative
+
+    &:before, &:after
+      content: ''
+      height: 2px
+      box-sizing: border-box
+      border-bottom: 2px dotted $accent-color
+      position: absolute
+      top: 60px
+      width: 24.5%
+    &:before
+      left: 19%
+    &:after
+      right: 19%
+
+  &__item
+    color: $main-color
+    font-size: 20px
+    line-height: 24px
+    font-weight: bold
+    width: 25%
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &:before
+      content: ''
+      @include size(120px)
+      border-radius: 100%
+      background-color: rgba(0,0,0,0.2);
+      margin-bottom: 26px
+      background-repeat: no-repeat
+      background-position: center
+
+    &--one:before
+      background-image: url('../img/footer-item-1.svg')
+    &--two:before
+      background-image: url('../img/footer-item-2.svg')
+    &--three:before
+      background-image: url('../img/footer-item-3.svg')
+      background-position: 56% 46%
+  &__bottom
+    background-color: rgba(0,0,0,0.2);
+
+    .footer__inner
+      display: flex
+      align-items: center
+      height: 80px
+  
+  &__copyright
+    font-size: 14px
+    line-height: 17px
+    color: $main-color;
