@@ -114,6 +114,7 @@ body
       @include bg(body-bg, png)
       mix-blend-mode: normal;
       opacity: 0.12;
+      z-index: 0
 
   &__title-wrapper
     width: calc(50% - 12px);
@@ -297,6 +298,7 @@ body
       background-position: center
       background-repeat: no-repeat
       border: 2px solid $border-color-oval
+      background: $main-color
       box-sizing: border-box
       border-radius: 100%
 
@@ -407,23 +409,20 @@ body
   &__button
     background: transparent
     border: 2px solid $button-bord-col
-    padding: 0 0 28px
+    padding: 118px 0 0
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.496235);
     border-radius: 40px;
     @include size(300px, 200px)
     box-sizing: border-box
     cursor: pointer
-    display: flex
     font-size: 20px
     line-height: 24px
     color: $main-color
     font-weight: bold
     font-family: $main-fonts
-    flex-direction: column
-    align-items: center
     position: relative
-    justify-content: flex-end
     @include trans(all)
+    outline: none
 
     &:hover
       background: rgba(178, 8, 56, 0.0974581);
@@ -437,6 +436,8 @@ body
       margin-bottom: 37px
       position: absolute
       bottom: 52px;
+      left: 50%
+      transform: translateX(-50%)
 
     &--business:before
       @include size(64px, 53px)
@@ -516,13 +517,16 @@ body
     padding: 26px 32px 80px
     box-sizing: border-box
     display: flex
-    flex-direction: column
-    justify-content: flex-end
+    flex-wrap: wrap
+    align-items: flex-end
+    align-content: flex-end
 
     &--main
       transform: translateX(0)
     &--info
       transform: translateX(100%)
+      flex-direction: column
+      align-items: flex-start
   &:nth-child(odd)
     .course__inner--main
       transform: translateX(0)
@@ -553,6 +557,10 @@ body
     line-height: 17px;
     color: $main-color
     margin-bottom: auto
+    width: 100%
+    position: absolute
+    top: 26px
+    left: 32px
 
   &__subtitle
     font-size: 14px
@@ -560,6 +568,7 @@ body
     color: $main-color
     text-transform: uppercase
     margin-bottom: 13px
+    width: 100%
   &__title
     font-size: 32px
     line-height: 38px
@@ -574,6 +583,7 @@ body
     color: $main-color
     margin-top: 0
     margin-bottom: 8px
+    width: 100%
 
     
   &__info
