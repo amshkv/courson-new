@@ -37,16 +37,25 @@
   background: image-set(url('../img/' + $url '.' + $ext) 1x, url('../img/' + $url+ '@2x.' + $ext) 2x, url('../img/' + $url + '@3x.' + $ext) 3x) center no-repeat;
 
 $main-fonts : Muller, sans-serif
+$bg-col: rgba(0,0,0,.3)
+$button-bord-col: rgba(255,255,255,.3)
+$main-color: #fff
+$second-color: #000
+$second-text-color: #4A4A4A
+$accent-color: #B20838
+$border-color-oval: #F4F4F4;
+$box-shadow-color: rgba(59,6,21,0.49)
+$title-primary-color: #E9E9E9;
 
 body 
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.2;
   font-weight: 400;
   font-family: $main-fonts
   margin: 0;
   padding: 0;
   min-width: 1020px
-  color: #000;
+  color: $second-color;
   position: relative
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
@@ -86,7 +95,8 @@ body
 .main-section
   padding-top: 130px
   padding-bottom: 71px
-  @include bg(header-bg, png)
+  @include bg(header-bg, jpg)
+  background-color: $bg-col
   background-size: cover
 
   &__inner
@@ -99,13 +109,13 @@ body
   &__subtitle
     font-size: 20px
     line-height: 24px
-    color: #ffffff
+    color: $main-color
     text-transform: uppercase
   &__title
     font-weight: bold
     font-size: 80px
     line-height: 90px
-    color: #fff
+    color: $main-color
     margin-top: 6px
     margin-bottom: 0
 
@@ -134,16 +144,16 @@ body
       font-size: 24px
       line-height: 29px
       font-weight: bold
-      color: #fff;
+      color: $main-color;
       margin-top: 0
       margin-bottom: 0
       transform: translatez(0);
 
       &-color
-        color: #B20838;
+        color: $accent-color;
 
     &-text
-      color: #FFFFFF;
+      color: $main-color;
       font-size: 16px
       line-height: 19px
       margin-top: 10px
@@ -159,7 +169,7 @@ body
 .video-add
   line-height: 19px;
   font-size: 16px
-  color: #fff
+  color: $main-color
   font-family: $main-fonts
   background: transparent
   border: none
@@ -194,18 +204,23 @@ body
 .link-button
   height: 48px
   line-height: 48px
-  width: 260px
   font-size: 16px;
-  text-transform: uppercase
-  color: #fff
+  color: $main-color
   display: block
   text-align: center
   text-decoration: none
   user-select: none
   font-weight: bold
   border-radius: 16px
-  background-color: #B20838
-  box-shadow: 0 10px 24px -12px rgba(59,6,21,0.49)
+  background-color: $accent-color
+  box-shadow: 0 10px 24px -12px $box-shadow-color
+
+  &--large
+    width: 260px
+    text-transform: uppercase
+  &--small
+    width: 220px
+
   &:hover, &:focus
     animation-name: shake;
     animation-duration: 0.8s;
@@ -229,9 +244,14 @@ body
     left: 13px 
     top: 2px
     width: 16px
-    background-color: #B20838
+    background-color: $accent-color
     height: 40px
     transform: skewX(-30deg)
+
+  &--invert
+    color: $main-color
+
+
 .result
   @include wrapper
 
@@ -242,12 +262,12 @@ body
     list-style: none
     display: flex
     justify-content: space-between
-    margin: 20px 0 0
+    margin: 36px -14px 0
     padding: 0
     
   &__item
     width: 25%
-    padding-top: 50px
+    padding-top: 148px
     position: relative
 
     &:before
@@ -259,6 +279,9 @@ body
       @include size(122px)
       background-position: center
       background-repeat: no-repeat
+      border: 2px solid $border-color-oval
+      box-sizing: border-box
+      border-radius: 100%
 
     &--one:before 
       background-image: url('../img/what-icon-1.svg')
@@ -278,8 +301,301 @@ body
     &-text
       font-size: 16px
       line-height: 19px
-      color: #4A4A4A
+      color: $second-text-color
       text-align: center
-      margin-top: 0
+      margin-top: 10px
       margin-bottom: 0
 
+.advantages
+  @include wrapper
+  margin-top: 82px
+
+  &__list
+    margin: 38px 0 0
+    padding: 0
+    list-style: none
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__item
+    font-size: 16px
+    line-height: 19px
+    color: $second-color;
+    width: 50%
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    width: calc(50% - 12px)
+    box-sizing: border-box
+
+    &:before
+      content: ''
+      background-color: $bg-col
+      @include size(180px)
+      border-radius: 100%;
+      flex: 0 0 180px
+      margin-right: 25px
+      background-position: center
+      background-repeat: no-repeat
+
+    &--one, &--two
+      margin-bottom: 40px
+
+    &--one, &--three
+      padding-left: 65px
+    
+    &--two, &--four
+      padding-left: 30px
+
+    &--one:before
+      @include bgcl(benefit-icon-1, jpg)
+    &--two:before
+      @include bgcl(benefit-icon-2, jpg)
+    &--three:before
+      @include bgcl(benefit-icon-3, jpg)
+    &--four:before
+      @include bgcl(benefit-icon-4, jpg)        
+
+  &__link
+    margin-left: auto
+    margin-right: auto
+    margin-top: 40px
+
+.courses
+  @include bg(courses-back, jpg)
+  background-size: cover
+  margin-top: 79px
+  background-color: $bg-col
+
+  &__inner
+    @include wrapper
+    padding-top: 82px
+    padding-bottom: 80px
+    position: relative
+
+    &:before
+      content: ''
+      @include size(306px)
+      position: absolute
+      left: 0
+      top: 0
+      // background-color: #fff
+      // background-color: rgba(255, 255, 255, 0.0539)
+      transform: skew(-30deg)
+
+  &__wrapper
+    display: flex
+    margin-top: 54px
+    justify-content: space-between
+
+  &__button
+    background: transparent
+    border: 2px solid $button-bord-col
+    padding: 0 0 28px
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.496235);
+    border-radius: 40px;
+    @include size(300px, 200px)
+    box-sizing: border-box
+    cursor: pointer
+    display: flex
+    font-size: 20px
+    line-height: 24px
+    color: $main-color
+    font-weight: bold
+    font-family: $main-fonts
+    flex-direction: column
+    align-items: center
+    position: relative
+    justify-content: flex-end
+    @include trans(all)
+
+    &:hover
+      background: rgba(178, 8, 56, 0.0974581);
+      box-shadow: 0 20px 40px -15px $accent-color;
+      border-color: $accent-color 
+
+    &:before
+      content: ''
+      background-position: center
+      background-repeat: no-repeat
+      margin-bottom: 37px
+      position: absolute
+      bottom: 52px;
+
+    &--business:before
+      @include size(64px, 53px)
+      background-image: url('../img/biz.svg')
+    &--finance:before
+      @include size(67px, 69px)
+      background-image: url('../img/finance.svg')
+    &--selling:before
+      @include size(64px, 61px)
+      background-image: url('../img/shop.svg')
+
+  &__text
+    margin-top: 34px
+    margin-bottom: 0
+    color: $main-color
+    text-align: center
+    font-size: 20px
+    line-height: 24px
+
+  &__link
+    margin-left: auto
+    margin-right: auto
+    margin-top: 30px
+
+.catalog
+  @include wrapper
+  margin-top: 82px
+
+  &__wrapper
+    padding-top: 32px
+
+    &-title
+      padding-left: 56px
+      margin-top: 0
+      margin-bottom: 0
+      color: $title-primary-color
+      font-size: 80px;
+      line-height: 96px;
+      font-weight: normal
+      text-transform: uppercase
+
+  &__course
+    &-list
+      padding: 0
+      margin: 6px 0 0
+      list-style: none
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &-item
+      margin-top: 24px
+
+.course
+  width: calc(50% - 12px)
+  height: 400px
+  position: relative
+  background-color: $bg-col
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  overflow: hidden
+  padding: 24px 32px 32px
+
+  &:hover
+    .course__inner--main
+      transform: translateX(-100%)
+    .course__inner--info
+      transform: translateX(0)
+
+  &__link
+    margin-top: auto
+    @include size(220px, 32px)
+    line-height: 32px
+    text-align: center
+    text-decoration: none
+    color: $main-color
+    border-radius: 16px;
+    background-color: $accent-color;
+    box-shadow: 0 10px 24px -12px $box-shadow-color;
+    cursor: pointer
+    z-index: 2
+    font-weight: bold
+    @include trans(opacity)
+    &:hover
+      opacity: .75
+  
+  &__inner
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    @include trans(transform)
+    padding: 26px 32px 80px
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+
+    &--main
+      transform: translateX(0)
+    &--info
+      transform: translateX(100%)
+
+  &__number
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    color: $main-color
+    margin-bottom: auto
+
+  &__subtitle
+    font-size: 14px
+    line-height: 17px
+    color: $main-color
+    text-transform: uppercase
+    margin-bottom: 13px
+  &__title
+    font-size: 32px
+    line-height: 38px
+    font-weight: bold
+    color: $main-color
+    margin-top: 0
+    margin-bottom: 6px
+
+  &__text
+    font-size: 14px
+    line-height: 17px
+    color: $main-color
+    margin-top: 0
+    margin-bottom: 8px
+
+    
+  &__info
+    &-list
+      list-style: none
+      padding: 0 
+      margin: auto 0 7px
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &-item
+      width: 50%
+      font-size: 14px
+      line-height: 17px
+      color: $main-color
+      height: 34px
+      display: flex
+      align-items: center
+      padding-right: 10%;
+      box-sizing: border-box
+
+      &:nth-child(1), &:nth-child(2)
+        margin-bottom: 15px
+
+      &:before
+        content: ''
+        @include size(34px)
+        flex: 0 0 34px
+        border-radius: 100%
+        border: 2px solid rgba(255,255,255,0.5);
+        box-sizing: border-box
+        margin-right: 7px
+        background-position: center
+        background-repeat: no-repeat
+        
+
+      &--time:before
+        background-image: url('../img/time.svg')
+      &--download:before
+        background-image: url('../img/download.svg')
+      &--blocks:before
+        background-image: url('../img/blocks.svg')
+      &--certificate:before
+        background-image: url('../img/certificate.svg')
+
+  
