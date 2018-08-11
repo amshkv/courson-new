@@ -493,12 +493,6 @@ body
   background-repeat: no-repeat
   background-size: cover
 
-  &:hover
-    .course__inner--main
-      transform: translateX(-100%)
-    .course__inner--info
-      transform: translateX(0)
-
   &__link
     margin-top: auto
     z-index: 2
@@ -520,7 +514,30 @@ body
       transform: translateX(0)
     &--info
       transform: translateX(100%)
+  &:nth-child(odd)
+    .course__inner--main
+      transform: translateX(0)
+    .course__inner--info
+      transform: translateX(100%)
+    &:hover
+      .course__inner--main
+        transform: translateX(-100%)
+      .course__inner--info
+        transform: translateX(0)
 
+  &:nth-child(even)
+    .course__inner--main
+      transform: translateX(0)
+    .course__inner--info
+      transform: translateX(-100%)
+
+    &:hover
+      .course__inner--main
+        transform: translateX(100%)
+      .course__inner--info
+        transform: translateX(0)
+  
+  
   &__number
     font-size: 14px;
     font-weight: bold;
