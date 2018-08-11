@@ -1,0 +1,215 @@
+@import fonts.scss
+
+@mixin trans($element) 
+  transition: $element .3s ease-in-out;
+  
+@keyframes shake
+  0% 
+    transform:scale(1)
+  10%, 20% 
+    transform: scale(0.99) rotate(-1deg)
+  30%, 50%, 70%, 90% 
+    transform: scale(1.01) rotate(1deg)
+  40%, 60%, 80% 
+    transform: scale(1.01) rotate(-1deg)
+  100% 
+    transform: scale(1) rotate(0)
+
+@mixin wrapper 
+  max-width: 1040px
+  width: 100%
+  padding-left: 12px
+  padding-right: 12px
+  box-sizing: border-box
+  margin-left: auto
+  margin-right: auto
+
+@mixin size($width, $height: $width)
+  width: $width
+  height: $height
+
+@mixin bgcl($url, $ext)
+  background-image: url('../img/' + $url + '.' + $ext );
+  background-image: image-set(url('../img/' + $url '.' + $ext) 1x, url('../img/' + $url+ '@2x.' + $ext) 2x, url('../img/' + $url + '@3x.' + $ext) 3x);
+
+@mixin bg($url, $ext)
+  background: url('../img/' + $url + '.' + $ext ) center no-repeat;
+  background: image-set(url('../img/' + $url '.' + $ext) 1x, url('../img/' + $url+ '@2x.' + $ext) 2x, url('../img/' + $url + '@3x.' + $ext) 3x) center no-repeat;
+
+$main-fonts : Muller, sans-serif
+
+body 
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  font-family: $main-fonts
+  margin: 0;
+  padding: 0;
+  min-width: 1020px
+  color: #000;
+  position: relative
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  overflow-x: hidden
+
+.header 
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  @include wrapper
+  display: flex
+  padding-top: 41px
+  align-items: center
+  flex-wrap: wrap
+
+  &__logo
+    @include trans(opacity)
+    &--tehnoprogress
+      width: 205px
+      height: 32px
+      margin-right: 77px
+
+    &--courson
+      height: 17px
+      width: 138px
+    
+    &-img
+      display: block
+      width: 100%
+      height: auto
+    
+    &:hover
+      opacity: .75
+  
+
+.main-section
+  padding-top: 130px
+  padding-bottom: 71px
+  @include bg(header-bg, png)
+  background-size: cover
+
+  &__inner
+    @include wrapper
+    display: flex
+    justify-content: space-between
+
+  &__title-wrapper
+    width: calc(50% - 12px);
+  &__subtitle
+    font-size: 20px
+    line-height: 24px
+    color: #ffffff
+    text-transform: uppercase
+  &__title
+    font-weight: bold
+    font-size: 80px
+    line-height: 90px
+    color: #fff
+    margin-top: 6px
+    margin-bottom: 0
+
+  &__info-block
+    width: calc(50% - 12px)
+    padding-left: 16px
+    box-sizing: border-box
+    
+  &__free
+    margin-top: 57px
+    padding-left: 88px
+    box-sizing: border-box
+    position: relative
+
+    &:before
+      content: ''
+      width: 49px
+      height: 54px
+      position: absolute
+      top: 0
+      left: 2px
+      background: url('../img/gift.svg') center no-repeat;
+
+
+    &-title
+      font-size: 24px
+      line-height: 29px
+      font-weight: bold
+      color: #fff;
+      margin-top: 0
+      margin-bottom: 0
+      transform: translatez(0);
+
+      &-color
+        color: #B20838;
+
+    &-text
+      color: #FFFFFF;
+      font-size: 16px
+      line-height: 19px
+      margin-top: 10px
+      margin-bottom: 0
+      max-width: 360px
+
+    &-link
+      margin-top: 24px
+
+
+  
+
+.video-add
+  line-height: 19px;
+  font-size: 16px
+  color: #fff
+  font-family: $main-fonts
+  background: transparent
+  border: none
+  max-width: 315px;
+  height: 56px
+  box-sizing: border-box
+  position: relative
+  padding-left: 88px
+  padding-top: 0
+  padding-bottom: 0
+  padding-right: 0
+  cursor: pointer
+  outline: none
+  text-align: left
+
+  &:before
+    content: '';
+    position: absolute
+    left: 0
+    top: 0
+    width: 56px
+    height: 56px
+    background: url('../img/play-icon.svg') center no-repeat
+    @include trans(transform)
+
+  &:hover:before
+    transform: rotate(360deg)
+
+
+
+
+.link-button
+  height: 48px
+  line-height: 48px
+  width: 260px
+  font-size: 16px;
+  text-transform: uppercase
+  color: #fff
+  display: block
+  text-align: center
+  text-decoration: none
+  user-select: none
+  font-weight: bold
+  border-radius: 16px
+  background-color: #B20838
+  box-shadow: 0 10px 24px -12px rgba(59,6,21,0.49)
+  &:hover, &:focus
+    animation-name: shake;
+    animation-duration: 0.8s;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
