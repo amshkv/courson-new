@@ -178,6 +178,21 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+}
+
+.main-section__inner:before {
+  content: '';
+  position: absolute;
+  width: 908px;
+  height: 1364px;
+  top: -44%;
+  left: 31%;
+  background: url("../img/body-bg.png") center no-repeat;
+  background: -webkit-image-set(url("../img/body-bg" ".png") 1x, url("../img/body-bg@2x.png") 2x, url("../img/body-bg@3x.png") 3x) center no-repeat;
+  background: image-set(url("../img/body-bg" ".png") 1x, url("../img/body-bg@2x.png") 2x, url("../img/body-bg@3x.png") 3x) center no-repeat;
+  mix-blend-mode: normal;
+  opacity: 0.12;
 }
 
 .main-section__title-wrapper {
@@ -578,11 +593,12 @@ body {
 
 .courses__inner:before {
   content: '';
-  width: 306px;
+  width: 130px;
   height: 306px;
   position: absolute;
-  left: 0;
-  top: 0;
+  right: calc(100% - 20px);
+  top: 20px;
+  background-color: rgba(255, 255, 255, 0.0539);
   -webkit-transform: skew(-30deg);
   -ms-transform: skew(-30deg);
   transform: skew(-30deg);
@@ -899,7 +915,6 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-right: 10%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -1006,7 +1021,6 @@ body {
   background: -webkit-image-set(url("../img/3steps-back" ".jpg") 1x, url("../img/3steps-back@2x.jpg") 2x, url("../img/3steps-back@3x.jpg") 3x) center no-repeat;
   background: image-set(url("../img/3steps-back" ".jpg") 1x, url("../img/3steps-back@2x.jpg") 2x, url("../img/3steps-back@3x.jpg") 3x) center no-repeat;
   background-size: cover;
-  padding-top: 82px;
 }
 
 .footer__inner {
@@ -1018,6 +1032,24 @@ body {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+}
+
+.footer__top {
+  position: relative;
+  padding-top: 82px;
+}
+
+.footer__top:before {
+  content: '';
+  width: 130px;
+  height: 306px;
+  position: absolute;
+  right: calc(100% - 50px);
+  top: 34px;
+  background-color: rgba(255, 255, 255, 0.0539);
+  -webkit-transform: skew(-30deg);
+  -ms-transform: skew(-30deg);
+  transform: skew(-30deg);
 }
 
 .footer__list {
@@ -1115,3 +1147,5 @@ body {
   line-height: 17px;
   color: #fff;
 }
+
+/*# sourceMappingURL=style.css.map */

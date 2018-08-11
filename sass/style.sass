@@ -103,6 +103,17 @@ body
     @include wrapper
     display: flex
     justify-content: space-between
+    position: relative
+
+    &:before
+      content: '';
+      position: absolute
+      @include size(908px, 1364px)
+      top: -44%
+      left: 31%
+      @include bg(body-bg, png)
+      mix-blend-mode: normal;
+      opacity: 0.12;
 
   &__title-wrapper
     width: calc(50% - 12px);
@@ -379,15 +390,13 @@ body
     padding-top: 82px
     padding-bottom: 80px
     position: relative
-
     &:before
       content: ''
-      @include size(306px)
+      @include size(130px, 306px)
       position: absolute
-      left: 0
-      top: 0
-      // background-color: #fff
-      // background-color: rgba(255, 255, 255, 0.0539)
+      right: calc(100% - 20px)
+      top: 20px
+      background-color: rgba(255, 255, 255, 0.0539)
       transform: skew(-30deg)
 
   &__wrapper
@@ -583,7 +592,6 @@ body
       height: 34px
       display: flex
       align-items: center
-      padding-right: 10%;
       box-sizing: border-box
 
       &:nth-child(1), &:nth-child(2)
@@ -639,10 +647,21 @@ body
   margin-top: 56px
   @include bg(3steps-back, jpg)
   background-size: cover
-  padding-top: 82px
 
   &__inner
     @include wrapper
+
+  &__top
+    position: relative
+    padding-top: 82px
+    &:before
+      content: ''
+      @include size(130px, 306px)
+      position: absolute
+      right: calc(100% - 50px)
+      top: 34px
+      background-color: rgba(255, 255, 255, 0.0539)
+      transform: skew(-30deg)
 
   &__list
     margin: 30px -16px 0
