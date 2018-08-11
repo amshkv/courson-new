@@ -466,24 +466,26 @@ body
   &__course
     &-list
       padding: 0
-      margin: 6px 0 0
+      margin: 30px 0 0
       list-style: none
       display: flex
       justify-content: space-between
       flex-wrap: wrap
     &-item
-      margin-top: 24px
+      margin-bottom: 24px
 
 .course
   width: calc(50% - 12px)
   height: 400px
   position: relative
-  background-color: $bg-col
   display: flex
   flex-direction: column
   box-sizing: border-box
   overflow: hidden
   padding: 24px 32px 32px
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
 
   &:hover
     .course__inner--main
@@ -506,7 +508,7 @@ body
     font-weight: bold
     @include trans(opacity)
     &:hover
-      opacity: .75
+      opacity: .5
   
   &__inner
     position: absolute
@@ -598,4 +600,28 @@ body
       &--certificate:before
         background-image: url('../img/certificate.svg')
 
+
+  &--one
+    @include bgcl(cours-pic-01,jpg)
+  &--two
+    @include bgcl(cours-pic-02,jpg)
+  &--three
+    @include bgcl(cours-pic-03,jpg)
+  &--four
+    @include bgcl(cours-pic-04,jpg)
+  &--five
+    @include bgcl(cours-pic-05,jpg)
+  &--six
+    @include bgcl(cours-pic-06,jpg)
+  &--seven
+    @include bgcl(cours-pic-07,jpg)
+  &--eight
+    @include bgcl(cours-pic-08,jpg)
+  &--nine
+    @include bgcl(cours-pic-09,jpg)
+  &--ten
+    @include bgcl(cours-pic-10,jpg)    
+
+  background-color: $bg-col
+  
   
