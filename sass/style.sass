@@ -71,6 +71,7 @@ body
   padding-top: 41px
   align-items: center
   flex-wrap: wrap
+  z-index: 1
 
   &__logo
     @include trans(opacity)
@@ -89,7 +90,7 @@ body
       height: auto
     
     &:hover
-      opacity: .75
+      opacity: .5
   
 
 .main-section
@@ -735,3 +736,64 @@ body
     font-size: 14px
     line-height: 17px
     color: $main-color;
+
+.modal
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba($second-color, .6);
+  box-shadow: 0 0 8px rgba($second-color,.3);
+  transition: margin-top .3s ease,height .3s ease;
+  transform: translateZ(0);
+  box-sizing: border-box;
+  z-index: 9999
+  display: none
+  align-items: center
+  justify-content: center
+  
+  &.active
+    display: flex;
+
+  &__inner
+    padding: 10px
+    width: 75%
+    max-width: 900px
+
+  &__wrapper
+    position: relative;
+    height: 0;
+    border: none;
+    padding-top: 56.27%;
+
+  &__body
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($second-color,.3);
+
+  &__iframe
+    display: block
+    width: 100%
+    height: 100%
+
+  &__close
+    color: $main-color;
+    position: absolute;
+    bottom: 100%;
+    right: 0px;
+    cursor: pointer;
+    display: block;
+    font-size: 60px
+    line-height: 60px
+    text-align: center
+    @include size(60px)
+    @include trans(transform)
+    transform: rotate(45deg)
+
+    &:hover
+      transform: rotate(315deg)
