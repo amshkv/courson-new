@@ -30,11 +30,11 @@
 
 @mixin bgcl($url, $ext)
   background-image: url('../img/' + $url + '.' + $ext );
-  background-image: image-set(url('../img/' + $url '.' + $ext) 1x, url('../img/' + $url+ '@2x.' + $ext) 2x, url('../img/' + $url + '@3x.' + $ext) 3x);
+  background-image: image-set(url('../img/' + $url + '.' + $ext) 1x, url('../img/' + $url+ '@2x.' + $ext) 2x, url('../img/' + $url + '@3x.' + $ext) 3x);
 
 @mixin bg($url, $ext)
   background: url('../img/' + $url + '.' + $ext ) center no-repeat;
-  background: image-set(url('../img/' + $url '.' + $ext) 1x, url('../img/' + $url+ '@2x.' + $ext) 2x, url('../img/' + $url + '@3x.' + $ext) 3x) center no-repeat;
+  background: image-set(url('../img/' + $url + '.' + $ext) 1x, url('../img/' + $url+ '@2x.' + $ext) 2x, url('../img/' + $url + '@3x.' + $ext) 3x) center no-repeat;
 
 $main-fonts : Muller, sans-serif
 $bg-col: rgba(0,0,0,.3)
@@ -646,6 +646,7 @@ body
 .footer
   margin-top: 56px
   @include bg(3steps-back, jpg)
+  background-color: $bg-col
   background-size: cover
 
   &__inner

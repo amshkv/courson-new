@@ -157,8 +157,8 @@ body {
   padding-top: 130px;
   padding-bottom: 71px;
   background: url("../img/header-bg.jpg") center no-repeat;
-  background: -webkit-image-set(url("../img/header-bg" ".jpg") 1x, url("../img/header-bg@2x.jpg") 2x, url("../img/header-bg@3x.jpg") 3x) center no-repeat;
-  background: image-set(url("../img/header-bg" ".jpg") 1x, url("../img/header-bg@2x.jpg") 2x, url("../img/header-bg@3x.jpg") 3x) center no-repeat;
+  background: -webkit-image-set(url("../img/header-bg.jpg") 1x, url("../img/header-bg@2x.jpg") 2x, url("../img/header-bg@3x.jpg") 3x) center no-repeat;
+  background: image-set(url("../img/header-bg.jpg") 1x, url("../img/header-bg@2x.jpg") 2x, url("../img/header-bg@3x.jpg") 3x) center no-repeat;
   background-color: rgba(0, 0, 0, 0.3);
   background-size: cover;
 }
@@ -189,8 +189,8 @@ body {
   top: -44%;
   left: 31%;
   background: url("../img/body-bg.png") center no-repeat;
-  background: -webkit-image-set(url("../img/body-bg" ".png") 1x, url("../img/body-bg@2x.png") 2x, url("../img/body-bg@3x.png") 3x) center no-repeat;
-  background: image-set(url("../img/body-bg" ".png") 1x, url("../img/body-bg@2x.png") 2x, url("../img/body-bg@3x.png") 3x) center no-repeat;
+  background: -webkit-image-set(url("../img/body-bg.png") 1x, url("../img/body-bg@2x.png") 2x, url("../img/body-bg@3x.png") 3x) center no-repeat;
+  background: image-set(url("../img/body-bg.png") 1x, url("../img/body-bg@2x.png") 2x, url("../img/body-bg@3x.png") 3x) center no-repeat;
   mix-blend-mode: normal;
   opacity: 0.12;
 }
@@ -540,26 +540,26 @@ body {
 
 .advantages__item--one:before {
   background-image: url("../img/benefit-icon-1.jpg");
-  background-image: -webkit-image-set(url("../img/benefit-icon-1" ".jpg") 1x, url("../img/benefit-icon-1@2x.jpg") 2x, url("../img/benefit-icon-1@3x.jpg") 3x);
-  background-image: image-set(url("../img/benefit-icon-1" ".jpg") 1x, url("../img/benefit-icon-1@2x.jpg") 2x, url("../img/benefit-icon-1@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/benefit-icon-1.jpg") 1x, url("../img/benefit-icon-1@2x.jpg") 2x, url("../img/benefit-icon-1@3x.jpg") 3x);
+  background-image: image-set(url("../img/benefit-icon-1.jpg") 1x, url("../img/benefit-icon-1@2x.jpg") 2x, url("../img/benefit-icon-1@3x.jpg") 3x);
 }
 
 .advantages__item--two:before {
   background-image: url("../img/benefit-icon-2.jpg");
-  background-image: -webkit-image-set(url("../img/benefit-icon-2" ".jpg") 1x, url("../img/benefit-icon-2@2x.jpg") 2x, url("../img/benefit-icon-2@3x.jpg") 3x);
-  background-image: image-set(url("../img/benefit-icon-2" ".jpg") 1x, url("../img/benefit-icon-2@2x.jpg") 2x, url("../img/benefit-icon-2@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/benefit-icon-2.jpg") 1x, url("../img/benefit-icon-2@2x.jpg") 2x, url("../img/benefit-icon-2@3x.jpg") 3x);
+  background-image: image-set(url("../img/benefit-icon-2.jpg") 1x, url("../img/benefit-icon-2@2x.jpg") 2x, url("../img/benefit-icon-2@3x.jpg") 3x);
 }
 
 .advantages__item--three:before {
   background-image: url("../img/benefit-icon-3.jpg");
-  background-image: -webkit-image-set(url("../img/benefit-icon-3" ".jpg") 1x, url("../img/benefit-icon-3@2x.jpg") 2x, url("../img/benefit-icon-3@3x.jpg") 3x);
-  background-image: image-set(url("../img/benefit-icon-3" ".jpg") 1x, url("../img/benefit-icon-3@2x.jpg") 2x, url("../img/benefit-icon-3@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/benefit-icon-3.jpg") 1x, url("../img/benefit-icon-3@2x.jpg") 2x, url("../img/benefit-icon-3@3x.jpg") 3x);
+  background-image: image-set(url("../img/benefit-icon-3.jpg") 1x, url("../img/benefit-icon-3@2x.jpg") 2x, url("../img/benefit-icon-3@3x.jpg") 3x);
 }
 
 .advantages__item--four:before {
   background-image: url("../img/benefit-icon-4.jpg");
-  background-image: -webkit-image-set(url("../img/benefit-icon-4" ".jpg") 1x, url("../img/benefit-icon-4@2x.jpg") 2x, url("../img/benefit-icon-4@3x.jpg") 3x);
-  background-image: image-set(url("../img/benefit-icon-4" ".jpg") 1x, url("../img/benefit-icon-4@2x.jpg") 2x, url("../img/benefit-icon-4@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/benefit-icon-4.jpg") 1x, url("../img/benefit-icon-4@2x.jpg") 2x, url("../img/benefit-icon-4@3x.jpg") 3x);
+  background-image: image-set(url("../img/benefit-icon-4.jpg") 1x, url("../img/benefit-icon-4@2x.jpg") 2x, url("../img/benefit-icon-4@3x.jpg") 3x);
 }
 
 .advantages__link {
@@ -570,8 +570,8 @@ body {
 
 .courses {
   background: url("../img/courses-back.jpg") center no-repeat;
-  background: -webkit-image-set(url("../img/courses-back" ".jpg") 1x, url("../img/courses-back@2x.jpg") 2x, url("../img/courses-back@3x.jpg") 3x) center no-repeat;
-  background: image-set(url("../img/courses-back" ".jpg") 1x, url("../img/courses-back@2x.jpg") 2x, url("../img/courses-back@3x.jpg") 3x) center no-repeat;
+  background: -webkit-image-set(url("../img/courses-back.jpg") 1x, url("../img/courses-back@2x.jpg") 2x, url("../img/courses-back@3x.jpg") 3x) center no-repeat;
+  background: image-set(url("../img/courses-back.jpg") 1x, url("../img/courses-back@2x.jpg") 2x, url("../img/courses-back@3x.jpg") 3x) center no-repeat;
   background-size: cover;
   margin-top: 79px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -957,69 +957,70 @@ body {
 
 .course--one {
   background-image: url("../img/cours-pic-01.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-01" ".jpg") 1x, url("../img/cours-pic-01@2x.jpg") 2x, url("../img/cours-pic-01@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-01" ".jpg") 1x, url("../img/cours-pic-01@2x.jpg") 2x, url("../img/cours-pic-01@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-01.jpg") 1x, url("../img/cours-pic-01@2x.jpg") 2x, url("../img/cours-pic-01@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-01.jpg") 1x, url("../img/cours-pic-01@2x.jpg") 2x, url("../img/cours-pic-01@3x.jpg") 3x);
 }
 
 .course--two {
   background-image: url("../img/cours-pic-02.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-02" ".jpg") 1x, url("../img/cours-pic-02@2x.jpg") 2x, url("../img/cours-pic-02@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-02" ".jpg") 1x, url("../img/cours-pic-02@2x.jpg") 2x, url("../img/cours-pic-02@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-02.jpg") 1x, url("../img/cours-pic-02@2x.jpg") 2x, url("../img/cours-pic-02@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-02.jpg") 1x, url("../img/cours-pic-02@2x.jpg") 2x, url("../img/cours-pic-02@3x.jpg") 3x);
 }
 
 .course--three {
   background-image: url("../img/cours-pic-03.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-03" ".jpg") 1x, url("../img/cours-pic-03@2x.jpg") 2x, url("../img/cours-pic-03@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-03" ".jpg") 1x, url("../img/cours-pic-03@2x.jpg") 2x, url("../img/cours-pic-03@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-03.jpg") 1x, url("../img/cours-pic-03@2x.jpg") 2x, url("../img/cours-pic-03@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-03.jpg") 1x, url("../img/cours-pic-03@2x.jpg") 2x, url("../img/cours-pic-03@3x.jpg") 3x);
 }
 
 .course--four {
   background-image: url("../img/cours-pic-04.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-04" ".jpg") 1x, url("../img/cours-pic-04@2x.jpg") 2x, url("../img/cours-pic-04@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-04" ".jpg") 1x, url("../img/cours-pic-04@2x.jpg") 2x, url("../img/cours-pic-04@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-04.jpg") 1x, url("../img/cours-pic-04@2x.jpg") 2x, url("../img/cours-pic-04@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-04.jpg") 1x, url("../img/cours-pic-04@2x.jpg") 2x, url("../img/cours-pic-04@3x.jpg") 3x);
 }
 
 .course--five {
   background-image: url("../img/cours-pic-05.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-05" ".jpg") 1x, url("../img/cours-pic-05@2x.jpg") 2x, url("../img/cours-pic-05@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-05" ".jpg") 1x, url("../img/cours-pic-05@2x.jpg") 2x, url("../img/cours-pic-05@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-05.jpg") 1x, url("../img/cours-pic-05@2x.jpg") 2x, url("../img/cours-pic-05@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-05.jpg") 1x, url("../img/cours-pic-05@2x.jpg") 2x, url("../img/cours-pic-05@3x.jpg") 3x);
 }
 
 .course--six {
   background-image: url("../img/cours-pic-06.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-06" ".jpg") 1x, url("../img/cours-pic-06@2x.jpg") 2x, url("../img/cours-pic-06@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-06" ".jpg") 1x, url("../img/cours-pic-06@2x.jpg") 2x, url("../img/cours-pic-06@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-06.jpg") 1x, url("../img/cours-pic-06@2x.jpg") 2x, url("../img/cours-pic-06@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-06.jpg") 1x, url("../img/cours-pic-06@2x.jpg") 2x, url("../img/cours-pic-06@3x.jpg") 3x);
 }
 
 .course--seven {
   background-image: url("../img/cours-pic-07.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-07" ".jpg") 1x, url("../img/cours-pic-07@2x.jpg") 2x, url("../img/cours-pic-07@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-07" ".jpg") 1x, url("../img/cours-pic-07@2x.jpg") 2x, url("../img/cours-pic-07@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-07.jpg") 1x, url("../img/cours-pic-07@2x.jpg") 2x, url("../img/cours-pic-07@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-07.jpg") 1x, url("../img/cours-pic-07@2x.jpg") 2x, url("../img/cours-pic-07@3x.jpg") 3x);
 }
 
 .course--eight {
   background-image: url("../img/cours-pic-08.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-08" ".jpg") 1x, url("../img/cours-pic-08@2x.jpg") 2x, url("../img/cours-pic-08@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-08" ".jpg") 1x, url("../img/cours-pic-08@2x.jpg") 2x, url("../img/cours-pic-08@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-08.jpg") 1x, url("../img/cours-pic-08@2x.jpg") 2x, url("../img/cours-pic-08@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-08.jpg") 1x, url("../img/cours-pic-08@2x.jpg") 2x, url("../img/cours-pic-08@3x.jpg") 3x);
 }
 
 .course--nine {
   background-image: url("../img/cours-pic-09.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-09" ".jpg") 1x, url("../img/cours-pic-09@2x.jpg") 2x, url("../img/cours-pic-09@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-09" ".jpg") 1x, url("../img/cours-pic-09@2x.jpg") 2x, url("../img/cours-pic-09@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-09.jpg") 1x, url("../img/cours-pic-09@2x.jpg") 2x, url("../img/cours-pic-09@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-09.jpg") 1x, url("../img/cours-pic-09@2x.jpg") 2x, url("../img/cours-pic-09@3x.jpg") 3x);
 }
 
 .course--ten {
   background-image: url("../img/cours-pic-10.jpg");
-  background-image: -webkit-image-set(url("../img/cours-pic-10" ".jpg") 1x, url("../img/cours-pic-10@2x.jpg") 2x, url("../img/cours-pic-10@3x.jpg") 3x);
-  background-image: image-set(url("../img/cours-pic-10" ".jpg") 1x, url("../img/cours-pic-10@2x.jpg") 2x, url("../img/cours-pic-10@3x.jpg") 3x);
+  background-image: -webkit-image-set(url("../img/cours-pic-10.jpg") 1x, url("../img/cours-pic-10@2x.jpg") 2x, url("../img/cours-pic-10@3x.jpg") 3x);
+  background-image: image-set(url("../img/cours-pic-10.jpg") 1x, url("../img/cours-pic-10@2x.jpg") 2x, url("../img/cours-pic-10@3x.jpg") 3x);
 }
 
 .footer {
   margin-top: 56px;
   background: url("../img/3steps-back.jpg") center no-repeat;
-  background: -webkit-image-set(url("../img/3steps-back" ".jpg") 1x, url("../img/3steps-back@2x.jpg") 2x, url("../img/3steps-back@3x.jpg") 3x) center no-repeat;
-  background: image-set(url("../img/3steps-back" ".jpg") 1x, url("../img/3steps-back@2x.jpg") 2x, url("../img/3steps-back@3x.jpg") 3x) center no-repeat;
+  background: -webkit-image-set(url("../img/3steps-back.jpg") 1x, url("../img/3steps-back@2x.jpg") 2x, url("../img/3steps-back@3x.jpg") 3x) center no-repeat;
+  background: image-set(url("../img/3steps-back.jpg") 1x, url("../img/3steps-back@2x.jpg") 2x, url("../img/3steps-back@3x.jpg") 3x) center no-repeat;
+  background-color: rgba(0, 0, 0, 0.3);
   background-size: cover;
 }
 
