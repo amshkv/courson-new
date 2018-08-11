@@ -683,6 +683,7 @@ body
     list-style: none
     padding-bottom: 40px
     position: relative
+    width: calc(100% + 32px)
 
     &:before, &:after
       content: ''
@@ -705,8 +706,10 @@ body
     width: 25%
     text-align: center
     display: flex
-    flex-direction: column
-    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    padding-top: 145px
+    position: relative
 
     &:before
       content: ''
@@ -716,6 +719,14 @@ body
       margin-bottom: 26px
       background-repeat: no-repeat
       background-position: center
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+
+    &--two
+      margin-left: auto
+      margin-right: auto
 
     &--one:before
       background-image: url('../img/footer-item-1.svg')
