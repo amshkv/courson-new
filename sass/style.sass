@@ -871,19 +871,410 @@ body
       width: calc(100% - 24px)
       padding-bottom: 54px
 
+
+@import slick
+
+@media screen and (max-width: 1023px)
+  .catalog__course-list
+    margin-right: -46px
+  .course
+    @include size(270px, 245px)
+    margin-right: 12px
+    outline: none
+    padding: 16px
+    margin-bottom: 0
+
+    &__inner
+      padding: 16px 16px 46px
+
+    &__link
+      position: absolute
+      top: 0
+      bottom: 16px
+
+    &__number
+      font-size: 10px
+      line-height: 12px
+      top: 18px
+      left: 16px
+
+    &__title
+      font-size: 16px
+      line-height: 19px
+
+    &__subtitle
+      font-size: 10px
+      line-height: 12px
+      margin-bottom: 7px
+
+    &__text
+      font-size: 9px
+      line-height: 11px
+      margin-bottom: 5px
+
+    &__info
+      &-item
+        font-size: 8px
+        line-height: 12px
+        height: 24px
+        &:nth-child(1), &:nth-child(2)
+          margin-bottom: 5px
+
+        &:before
+          @include size(24px)
+          flex: 0 0 24px
+          background-size: 10px
+
+
+  .link-button--course
+    height: 24px
+    width: 150px
+    border-radius: 12px
+    line-height: 24px
+    font-size: 12px
+    box-shadow: 0 8px 18px -9px rgba(59,6,21,0.49)
+
+.slick-dots
+  display: flex
+  justify-content: center
+  list-style: none
+  margin: 12px 0 0
+  padding-left: 0
+  padding-right: 46px
+
+  button
+    text-indent: -9999px
+    border: none
+    display: block
+    width: 4px
+    height: 4px
+    background-color: #D8D8D8;
+    margin-left: 3px
+    margin-right: 3px
+    border-radius: 100%
+    padding: 0
+
+.slick-active button
+  background-color: $accent-color
+
 @media screen and (max-width: 899px)
   .header
     padding-left: 20px
     padding-right: 20px
     justify-content: space-between
-    padding-top: 25px
+    padding-top: 24px
+    align-items: flex-start
     &__logo
       &--tehnoprogress
         @include size(143px, 21px)
         margin-right: auto
       &--courson
+        margin-top: 6px
         @include size(96px, 12px)
   .main-section
+    padding-top: 87px
+    padding-bottom: 55px
     &__inner
       flex-wrap: wrap
+      padding-left: 26px
+      padding-right: 26px
+      &:before
+        right: -91%;
+        top: -90px;
+    &__title-wrapper
+      width: 100%
+    &__info-block
+      width: 100%
+      padding-left: 0
+      margin-top: 30px
+      max-width: 320px
+      margin-left: auto
+      margin-right: auto
+    &__subtitle
+      font-size: 14px
+      line-height: 17px
+      text-align: center
+    &__title
+      font-size: 40px
+      line-height: 40px
+      text-align: center
+      margin-top: 9px
+
+    &__free
+      margin-top: 23px
+      padding-left: 52px
+      &-title
+        font-size: 16px
+        line-height: 19px
+      &-text
+        font-size: 12px
+        line-height: 14px
+        margin-top: 8px   
+        margin-right: -10px   
+
+      &:before
+        @include size(24.5px, 27px)
+        top: 4px
+        left: 0
+
+      &-link
+        margin-top: 12px
   
+
+  .video-add
+    font-size: 12px
+    line-height: 14px
+    height: 28px
+    padding-left: 54px
+    &:before
+      @include size(28px)
+
+  .link-button
+    font-size: 12px
+    
+    &--large
+      width: 164px
+      height: 32px
+      line-height: 32px
+      border-radius: 8px;
+      box-shadow: 0 5px 12px -6px rgba(59,6,21,0.49);
+
+    &--small
+      width: 165px
+      line-height: 36px
+      height: 36px
+      border-radius: 12px;
+      box-shadow: 0 8px 18px -9px rgba(59,6,21,0.49);
+
+  .main-title
+    font-size: 24px
+    line-height: 29px
+    padding-left: 28px
+
+    &:before
+      height: 20px
+      top: 3px
+      width: 7px
+      left: 7px
+
+
+  .result
+    padding-left: 20px
+    padding-right: 20px
+    &__title
+      margin-top: 33px
+    &__list
+      margin-top: 29px
+      margin-left: auto
+      margin-right: auto
+      flex-wrap: wrap
+      max-width: 500px
+    &__item
+      width: 100%
+      padding-top: 0
+      padding-left: 120px
+      height: 100px
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+      &-title
+        text-align: left
+
+      &-text
+        text-align: left
+
+      &:before
+        @include size(90px)
+        left: 0
+        top: 50%
+        transform: translate(0, -50%)
+
+  .advantages
+    padding-left: 20px
+    padding-right: 20px
+    margin-top: 11px
+
+    &__list
+      margin-top: 22px
+      max-width: 500px
+      margin-left: auto
+      margin-right: auto
+
+    &__item
+      width: 100%
+      margin-bottom: 16px
+
+      &:before
+        @include size(90px)
+        flex: 0 0 90px
+        background-size: cover
+
+    &__link
+      margin-top: 8px
+    
+  .courses
+    margin-top: 32px
+
+    &__inner
+      padding-top: 34px
+      padding-bottom: 31px
+      padding-left: 20px
+      padding-right: 20px
+
+      &:before
+        display: none
+
+    &__wrapper
+      flex-wrap: wrap
+      margin-top: 22px
+      margin-left: auto
+      margin-right: auto
+      max-width: 400px
+
+    &__button
+      width: 100%
+      margin-bottom: 16px
+      height: 100px
+      border-radius: 24px
+      padding-top: 0
+      font-size: 16px
+      line-height: 19px
+      padding-left: 108px
+      text-align: left
+
+      &:before
+        left: 28px
+        top: 50%
+        transform: translate(0, -50%)
+
+      &--business:before
+        @include size(48px, 40px)
+      &--finance:before
+        @include size(50px, 44px)
+      &--selling:before
+        @include size(48px, 46px)
+        left: 30px
+
+    &__text
+      font-size: 14px
+      line-height: 17px
+      margin-top: 9px
+      margin-left: -8px
+      margin-right: -8px
+
+
+    &__link
+      margin-top: 24px
+
+    .dib
+      display: inline-block
+
+  .catalog
+    margin-top: 34px
+    padding-left: 20px
+    padding-right: 20px
+    
+    &__wrapper
+      padding-top: 10px
+      padding-bottom: 14px
+      &-title
+        font-size: 40px
+        line-height: 48px
+        padding-left: 0
+    &__course
+      &-list
+        margin-top: 12px
+        margin-left: -20px
+
+  .footer
+    margin-top: 18px
+    &__inner
+      padding-left: 20px
+      padding-right: 20px
+    &__top
+      padding-top: 35px
+
+      &:before
+        display: none
+
+    &__list
+      flex-wrap: wrap;
+      width: 100%
+      max-width: 400px;
+      margin-left: auto
+      margin-right: auto
+      margin-top: 19px
+      padding-bottom: 12px
+      &:before, &:after
+        display: none
+    &__item
+      height: 90px
+      width: 100%
+      padding-top: 0
+      padding-left: 107px
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      font-size: 16px
+      line-height: 19px
+      text-align: left
+      margin-bottom: 18px
+
+      &:before
+        @include size(90px)
+        top: 50%
+        left: 0
+        transform: translate(0, -50%)
+        margin-bottom: 0
+        background-size: 38px
+        
+    &__bottom
+      .footer__inner
+        height: 40px
+        justify-content: center
+    &__copyright
+      font-size: 12px
+      line-height: 14px
+
+.slick-dots
+  padding-right: 20px
+
+@media screen and (max-width: 599px)
+  .result
+    &__list
+      max-width: 400px
+    &__item
+      padding-left: 76px
+      margin-bottom: 28px
+      height: 48px
+      &-title
+        font-size: 14px
+        line-height: 17px
+        text-align: left
+      
+      &-text
+        text-align: left
+        font-size: 12px
+        line-height: 14px
+        margin-top: 3px
+        padding-right: 10px
+
+      &:before
+        @include size(61px)
+        border-width: 1px
+
+  .advantages
+    &__list
+      max-width: 400px
+    &__item
+      font-size: 12px
+      line-height: 14px
+      width: 100%
+      margin-bottom: 16px
+
+      &:before
+        @include size(90px)
+        flex: 0 0 90px
+        margin-right: 16px
+        background-size: cover

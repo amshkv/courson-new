@@ -66,4 +66,22 @@ $(function() {
       });
     }
   });
+
+  $(window).on('load resize', function() {
+    if (innerWidth >= 1024) {
+      if ($('.catalog__course-list').hasClass('slick-slider')) {
+        $('.catalog__course-list').slick('unslick');
+      }
+    } else {
+      $('.catalog__course-list')
+        .not('.slick-initialized')
+        .slick({
+          variableWidth: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false
+        });
+    }
+  });
 });
