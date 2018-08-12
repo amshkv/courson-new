@@ -16,10 +16,10 @@
     transform: scale(1) rotate(0)
 
 @mixin wrapper 
-  max-width: 1040px
+  max-width: 1116px
   width: 100%
-  padding-left: 12px
-  padding-right: 12px
+  padding-left: 46px
+  padding-right: 46px
   box-sizing: border-box
   margin-left: auto
   margin-right: auto
@@ -54,7 +54,6 @@ body
   font-family: $main-fonts
   margin: 0;
   padding: 0;
-  min-width: 1020px
   color: $second-color;
   position: relative
   -webkit-font-smoothing: antialiased;
@@ -91,6 +90,9 @@ body
     
     &:hover
       opacity: .5
+
+.main
+  overflow-x: hidden
   
 
 .main-section
@@ -111,7 +113,7 @@ body
       position: absolute
       @include size(908px, 1364px)
       top: -44%
-      left: 31%
+      right: -19%
       @include bg(body-bg, png)
       mix-blend-mode: normal;
       opacity: 0.12;
@@ -413,7 +415,7 @@ body
     padding: 118px 0 0
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.496235);
     border-radius: 40px;
-    @include size(300px, 200px)
+    @include size(calc(33.33% - 40px), 200px)
     box-sizing: border-box
     cursor: pointer
     font-size: 20px
@@ -528,6 +530,7 @@ body
       transform: translateX(100%)
       flex-direction: column
       align-items: flex-start
+      flex-wrap: nowrap
   &:nth-child(odd)
     .course__inner--main
       transform: translateX(0)
@@ -808,3 +811,79 @@ body
 
     &:hover
       transform: rotate(315deg)
+
+@media screen and (max-width: 1260px)
+  .main-section__inner:before
+    right: 0
+  
+  .result
+    &__title
+      margin-top: 57px
+    &__list
+      margin-left: 12px
+      margin-right: 12px
+
+  .advantages
+    margin-top: 58px
+
+    &__item
+      width: calc(50% - 18px)
+
+      &--one, &--two, &--three, &--four
+        padding-left: 0
+
+  .courses
+    margin-top: 56px
+
+    &__inner  
+      padding-top: 58px
+      padding-bottom: 56px
+
+    &__wrapper
+      margin-top: 38px
+
+  .courses__inner:before
+    right: auto;
+    left: 112px;
+    top: 20px;
+
+  .catalog
+    margin-top: 58px
+
+  .course
+    width: calc(50% - 10px);
+
+  .link-button--course
+    width: 200px
+
+  .footer
+    margin-top: 32px
+    &__top
+      padding-top: 58px
+      &:before
+        right: auto
+        left: 113px
+        top: 22px
+    &__list
+      margin-top: 40px
+      margin-left: 12px
+      margin-right: 12px
+      width: calc(100% - 24px)
+      padding-bottom: 54px
+
+@media screen and (max-width: 899px)
+  .header
+    padding-left: 20px
+    padding-right: 20px
+    justify-content: space-between
+    padding-top: 25px
+    &__logo
+      &--tehnoprogress
+        @include size(143px, 21px)
+        margin-right: auto
+      &--courson
+        @include size(96px, 12px)
+  .main-section
+    &__inner
+      flex-wrap: wrap
+  
