@@ -1923,4 +1923,16 @@ body {
   }
 }
 
+@media screen and (orientation: landscape) and (min-aspect-ratio: 16 / 9) {
+  .modal__inner {
+    width: 45%;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .modal__inner {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
