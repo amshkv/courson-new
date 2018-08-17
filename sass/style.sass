@@ -118,6 +118,7 @@ body
       mix-blend-mode: normal;
       opacity: 0.12;
       z-index: 0
+      pointer-events: none
 
   &__title-wrapper
     width: calc(50% - 12px);
@@ -350,34 +351,45 @@ body
     align-items: center
     width: calc(50% - 12px)
     box-sizing: border-box
+    position: relative
+    padding-left: 205px
+    height: 180px
 
     &:before
       content: ''
       background-color: $bg-col
       @include size(180px)
       border-radius: 100%;
-      flex: 0 0 180px
+      position: absolute
       margin-right: 25px
       background-position: center
       background-repeat: no-repeat
+      left: 0
+      top: 50%;
+      transform: translateY(-50%)
+
 
     &--one, &--two
       margin-bottom: 40px
 
     &--one, &--three
-      padding-left: 65px
+      padding-left: 270px
     
     &--two, &--four
-      padding-left: 30px
+      padding-left: 235px
 
     &--one:before
       @include bgcl(benefit-icon-1, jpg)
+      left: 65px
     &--two:before
       @include bgcl(benefit-icon-2, jpg)
+      left: 30px
     &--three:before
       @include bgcl(benefit-icon-3, jpg)
+      left: 65px
     &--four:before
-      @include bgcl(benefit-icon-4, jpg)        
+      @include bgcl(benefit-icon-4, jpg)
+      left: 30px        
 
   &__link
     margin-left: auto
@@ -830,7 +842,10 @@ body
       width: calc(50% - 18px)
 
       &--one, &--two, &--three, &--four
-        padding-left: 0
+        padding-left: 205px
+
+      &--one:before, &--two:before, &--three:before, &--four:before
+        left: 0
 
   .courses
     margin-top: 56px
@@ -1104,10 +1119,11 @@ body
     &__item
       width: 100%
       margin-bottom: 16px
+      height: 90px
+      padding-left: 107px
 
       &:before
         @include size(90px)
-        flex: 0 0 90px
         background-size: cover
 
     &__link

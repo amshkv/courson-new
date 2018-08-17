@@ -198,6 +198,7 @@ body {
   mix-blend-mode: normal;
   opacity: 0.12;
   z-index: 0;
+  pointer-events: none;
 }
 
 .main-section__title-wrapper {
@@ -516,6 +517,9 @@ body {
   align-items: center;
   width: calc(50% - 12px);
   box-sizing: border-box;
+  position: relative;
+  padding-left: 205px;
+  height: 180px;
 }
 
 .advantages__item:before {
@@ -524,12 +528,15 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 100%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 180px;
-  flex: 0 0 180px;
+  position: absolute;
   margin-right: 25px;
   background-position: center;
   background-repeat: no-repeat;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .advantages__item--one, .advantages__item--two {
@@ -537,35 +544,39 @@ body {
 }
 
 .advantages__item--one, .advantages__item--three {
-  padding-left: 65px;
+  padding-left: 270px;
 }
 
 .advantages__item--two, .advantages__item--four {
-  padding-left: 30px;
+  padding-left: 235px;
 }
 
 .advantages__item--one:before {
   background-image: url("../img/benefit-icon-1.jpg");
   background-image: -webkit-image-set(url("../img/benefit-icon-1.jpg") 1x, url("../img/benefit-icon-1@2x.jpg") 2x, url("../img/benefit-icon-1@3x.jpg") 3x);
   background-image: image-set(url("../img/benefit-icon-1.jpg") 1x, url("../img/benefit-icon-1@2x.jpg") 2x, url("../img/benefit-icon-1@3x.jpg") 3x);
+  left: 65px;
 }
 
 .advantages__item--two:before {
   background-image: url("../img/benefit-icon-2.jpg");
   background-image: -webkit-image-set(url("../img/benefit-icon-2.jpg") 1x, url("../img/benefit-icon-2@2x.jpg") 2x, url("../img/benefit-icon-2@3x.jpg") 3x);
   background-image: image-set(url("../img/benefit-icon-2.jpg") 1x, url("../img/benefit-icon-2@2x.jpg") 2x, url("../img/benefit-icon-2@3x.jpg") 3x);
+  left: 30px;
 }
 
 .advantages__item--three:before {
   background-image: url("../img/benefit-icon-3.jpg");
   background-image: -webkit-image-set(url("../img/benefit-icon-3.jpg") 1x, url("../img/benefit-icon-3@2x.jpg") 2x, url("../img/benefit-icon-3@3x.jpg") 3x);
   background-image: image-set(url("../img/benefit-icon-3.jpg") 1x, url("../img/benefit-icon-3@2x.jpg") 2x, url("../img/benefit-icon-3@3x.jpg") 3x);
+  left: 65px;
 }
 
 .advantages__item--four:before {
   background-image: url("../img/benefit-icon-4.jpg");
   background-image: -webkit-image-set(url("../img/benefit-icon-4.jpg") 1x, url("../img/benefit-icon-4@2x.jpg") 2x, url("../img/benefit-icon-4@3x.jpg") 3x);
   background-image: image-set(url("../img/benefit-icon-4.jpg") 1x, url("../img/benefit-icon-4@2x.jpg") 2x, url("../img/benefit-icon-4@3x.jpg") 3x);
+  left: 30px;
 }
 
 .advantages__link {
@@ -1281,7 +1292,10 @@ body {
     width: calc(50% - 18px);
   }
   .advantages__item--one, .advantages__item--two, .advantages__item--three, .advantages__item--four {
-    padding-left: 0;
+    padding-left: 205px;
+  }
+  .advantages__item--one:before, .advantages__item--two:before, .advantages__item--three:before, .advantages__item--four:before {
+    left: 0;
   }
   .courses {
     margin-top: 56px;
@@ -1711,13 +1725,12 @@ body {
   .advantages__item {
     width: 100%;
     margin-bottom: 16px;
+    height: 90px;
+    padding-left: 107px;
   }
   .advantages__item:before {
     width: 90px;
     height: 90px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 90px;
-    flex: 0 0 90px;
     background-size: cover;
   }
   .advantages__link {
@@ -1934,5 +1947,3 @@ body {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
